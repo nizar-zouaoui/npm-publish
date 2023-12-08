@@ -1,7 +1,7 @@
 {
   "name": "nizar-npm-publish-test",
   "description": "this is a temp project to test exports after build",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/nizar-zouaoui/npm-publish"
