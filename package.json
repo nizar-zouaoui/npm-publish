@@ -1,0 +1,15 @@
+{
+  "name": "temp_project",
+  "description": "this is a temp project to test exports after build",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "launch": "npx ts-node src/index"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
