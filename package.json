@@ -1,37 +1,38 @@
 {
   "name": "nizar-npm-publish-test",
   "description": "this is a temp project to test exports after build",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/nizar-zouaoui/npm-publish"
   },
-  "main": "index.js",
+  "main": "build/cjs/index.js",
+  "module": "build/mjs/index.js",
+  "types": "build/mjs/index.d.ts",
   "files": [
     "build/cjs",
-    "build/esm",
-    "build/@types"
+    "build/esm"
   ],
-  "types": "build/@types",
   "exports": {
     ".": {
-      "import": "./build/esm/index.mjs",
-      "require": "./build/cjs/index.js"
+      "import": "./build/esm/index.js",
+      "require": "./build/cjs/index.js",
+      "types": "./build/esm/index.d.ts"
     },
     "./*": {
-      "import": "./build/esm/*.mjs",
-      "require": "./build/cjs/*.js"
+      "import": "./build/esm/*.js",
+      "require": "./build/cjs/*.js",
+      "types": "./build/esm/*.d.ts"
     }
   },
   "license": "MIT",
   "scripts": {
     "clean": "rimraf build",
-    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:types",
-    "build:esm": "tsc -p tsconfig.prod.json --module ES2022 --outDir build/esm",
-    "build:cjs": "tsc -p tsconfig.prod.json --module commonjs --outDir build/cjs",
-    "build:types": "tsc --p tsconfig.types.prod.json -emitDeclarationOnly",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && node ./fixup.js",
+    "build:esm": "tsc -p tsconfig.esm.json --outDir build/esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json --outDir build/cjs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "launch": "npx ts-node src/index"
+    "launch": "npx ts-node index"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
@@ -39,6 +40,7 @@
   },
   "dependencies": {
     "@types/rimraf": "^4.0.5",
+    "dynamodb-onetable": "^2.7.1",
     "rimraf": "^5.0.5"
   }
 }
