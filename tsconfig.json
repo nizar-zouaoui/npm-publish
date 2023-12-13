@@ -18,10 +18,13 @@
     "noEmit": false,
     "module": "CommonJS",
     "moduleResolution": "node",
-    "declaration": true
-  },
-  "ts-node": {
-    "require": ["tsconfig-paths/register"]
+    "declaration": true,
+    "inlineSourceMap": false,
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "noFallthroughCasesInSwitch": true,
+    "pretty": true,
+    "traceResolution": false
   },
   "include": ["."],
   "exclude": ["build", "node_modules", ".turbo", "coverage", "dist"],

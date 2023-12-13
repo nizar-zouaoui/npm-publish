@@ -1,0 +1,7 @@
+{
+  "name": "multiply",
+  "description": "AWS SDK V3 access for OneTable",
+  "main": "../../build/cjs/mult/multiply.js",
+  "module": "../../build/esm/mult/multiply.js",
+  "types": "../../build/esm/mult/multiply.d.ts"
+}

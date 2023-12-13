@@ -1,0 +1,7 @@
+{
+  "name": "divide",
+  "description": "AWS SDK V3 access for OneTable",
+  "main": "../../build/cjs/mult/divide.js",
+  "module": "../../build/esm/mult/divide.js",
+  "types": "../../build/esm/mult/divide.d.ts"
+}
