@@ -1,7 +1,7 @@
 {
   "name": "nizar-npm-publish-test",
   "description": "this is a temp project to test exports after build",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "repository": {
     "type": "git",
     "url": "https://github.com/nizar-zouaoui/npm-publish"
@@ -10,7 +10,7 @@
   "module": "build/index.mjs",
   "types": "build/index.d.ts",
   "files": [
-    "build"
+    "build/*"
   ],
   "exports": {
     ".": {
