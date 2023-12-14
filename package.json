@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@types/rimraf": "^4.0.5",
+    "date-fns": "^2.30.0",
     "dynamodb-onetable": "^2.7.1",
     "rimraf": "^5.0.5",
     "tsup": "^8.0.1"
