@@ -1,36 +1,36 @@
 {
   "name": "nizar-npm-publish-test",
   "description": "this is a temp project to test exports after build",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/nizar-zouaoui/npm-publish"
   },
-  "main": "build/cjs/index.js",
-  "module": "build/esm/index.js",
-  "types": "build/esm/index.d.ts",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
   "files": [
     "build/cjs",
     "build/esm"
   ],
   "exports": {
     ".": {
-      "import": "./build/esm/index.js",
-      "require": "./build/cjs/index.js",
-      "types": "./build/esm/index.d.ts"
+      "import": "./build/index.js",
+      "require": "./build/index.js",
+      "types": "./build/index.d.ts"
     },
     "./*": {
-      "import": "./build/esm/*.js",
-      "require": "./build/cjs/*.js",
-      "types": "./build/esm/*.d.ts"
+      "import": "./build/*.js",
+      "require": "./build/*.js",
+      "types": "./build/*.d.ts"
     }
   },
   "license": "MIT",
   "scripts": {
     "clean": "rimraf build",
     "build": "yarn clean && yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc -p tsconfig.esm.json --outDir build/esm",
-    "build:cjs": "tsc -p tsconfig.cjs.json --outDir build/cjs",
+    "build:esm": "tsc -p tsconfig.esm.json --outDir build",
+    "build:cjs": "tsc -p tsconfig.cjs.json  --outDir build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "launch": "npx ts-node index"
   },
