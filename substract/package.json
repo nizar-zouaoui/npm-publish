@@ -1,7 +1,7 @@
 {
   "name": "substract",
   "description": "AWS SDK V3 access for OneTable",
-  "main": "../build/cjs/substract.js",
-  "module": "../build/esm/substract.js",
-  "types": "../build/esm/substract.d.ts"
+  "main": "substract/index.js",
+  "module": "substract/index.mjs",
+  "types": "substract/index.d.ts"
 }

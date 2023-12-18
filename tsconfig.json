@@ -27,6 +27,13 @@
     "traceResolution": false
   },
   "include": ["."],
-  "exclude": ["build", "node_modules", ".turbo", "coverage", "dist"],
+  "exclude": [
+    "build",
+    "node_modules",
+    ".turbo",
+    "coverage",
+    "dist",
+    "update-mjs-extensions.js"
+  ],
   "moduleResolution": ["node_modules", "node"]
 }
