@@ -19,6 +19,7 @@
     "*.config.js",
     "*.config.ts",
     ".env",
-    "src/**/*.test.ts"
+    "src/**/*.test.ts",
+    "scripts"
   ]
 }

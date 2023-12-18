@@ -1,0 +1,8 @@
+
+{
+        "name": "helper",
+        "description": "This is the export package for helper",
+        "main": "../../mult/helper/index.js",
+        "module": "../../mult/helper/index.mjs",
+        "types": "../../mult/helper/index.d.ts"
+}

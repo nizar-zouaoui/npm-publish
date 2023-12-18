@@ -1,0 +1,8 @@
+
+{
+        "name": "divide",
+        "description": "This is the export package for divide",
+        "main": "../../mult/divide/index.js",
+        "module": "../../mult/divide/index.mjs",
+        "types": "../../mult/divide/index.d.ts"
+}

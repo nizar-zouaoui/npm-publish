@@ -1,0 +1,8 @@
+
+{
+        "name": "substract",
+        "description": "This is the export package for substract",
+        "main": "../substract/index.js",
+        "module": "../substract/index.mjs",
+        "types": "../substract/index.d.ts"
+}

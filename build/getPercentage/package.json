@@ -1,0 +1,8 @@
+
+{
+        "name": "getPercentage",
+        "description": "This is the export package for getPercentage",
+        "main": "../getPercentage/index.js",
+        "module": "../getPercentage/index.mjs",
+        "types": "../getPercentage/index.d.ts"
+}

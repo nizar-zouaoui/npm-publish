@@ -9,39 +9,17 @@
   "main": "index.js",
   "module": "index.mjs",
   "types": "index.d.ts",
-  "files": [
-    "build/*"
-  ],
-  "exports": {
-    ".": {
-      "import": {
-        "default": "./index.mjs",
-        "types": "./index.d.ts"
-      },
-      "require": {
-        "default": "./index.js",
-        "types": "./index.d.ts"
-      }
-    },
-    "./*": {
-      "import": {
-        "default": "./*/index.mjs",
-        "types": "./*/index.d.ts"
-      },
-      "require": {
-        "default": "./*/index.js",
-        "types": "./*/index.d.ts"
-      }
-    }
-  },
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "clean": "rimraf build",
-    "build": "yarn clean && yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc-esm -p tsconfig.esm.json",
+    "build": "yarn clean && yarn build:esm && node ./scripts/update-mjs-extensions.mjs && yarn build:cjs && node ./scripts/indexifyFile.mjs",
+    "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "launch": "npx ts-node index"
+    "test": "vitest run",
+    "lint": "tsc",
+    "launch": "npx ts-node index",
+    "ci": "yarn lint && yarn test && yarn build"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
@@ -53,6 +31,7 @@
     "date-fns": "^2.30.0",
     "dynamodb-onetable": "^2.7.1",
     "rimraf": "^5.0.5",
-    "tsup": "^8.0.1"
+    "tsup": "^8.0.1",
+    "vitest": "^1.0.4"
   }
 }
