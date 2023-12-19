@@ -1,7 +1,7 @@
 {
   "name": "nizar-npm-publish-test",
   "description": "this is a temp project to test exports after build",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/nizar-zouaoui/npm-publish"
@@ -18,9 +18,29 @@
       "require": "./build/cjs/index.js",
       "import": "./build/esm/index.js"
     },
-    "./*": {
-      "require": "./build/cjs/*.js",
-      "import": "./build/esm/*.js"
+    "./getPercentage": {
+      "require": "./build/cjs/getPercentage.js",
+      "import": "./build/esm/getPercentage.js"
+    },
+    "./mult/divide": {
+      "require": "./build/cjs/mult/divide.js",
+      "import": "./build/esm/mult/divide.js"
+    },
+    "./mult/helper": {
+      "require": "./build/cjs/mult/helper/index.js",
+      "import": "./build/esm/mult/helper/index.js"
+    },
+    "./mult/multiply": {
+      "require": "./build/cjs/mult/multiply/index.js",
+      "import": "./build/esm/mult/multiply/index.js"
+    },
+    "./mult/multiply/square": {
+      "require": "./build/cjs/mult/multiply/square.js",
+      "import": "./build/esm/mult/multiply/square.js"
+    },
+    "./substract": {
+      "require": "./build/cjs/substract.js",
+      "import": "./build/esm/substract.js"
     }
   },
   "typesVersions": {
@@ -32,10 +52,10 @@
         "build/@types/mult/divide"
       ],
       "mult/helper": [
-        "build/@types/mult/helper"
+        "build/@types/mult/helper/index"
       ],
       "mult/multiply": [
-        "build/@types/mult/multiply"
+        "build/@types/mult/multiply/index"
       ],
       "mult/multiply/square": [
         "build/@types/mult/multiply/square"
