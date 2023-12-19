@@ -1,8 +1,0 @@
-
-{
-        "name": "square",
-        "description": "This is the export package for square",
-        "main": "../../../mult/multiply/square/index.js",
-        "module": "../../../mult/multiply/square/index.mjs",
-        "types": "../../../mult/multiply/square/index.d.ts"
-}

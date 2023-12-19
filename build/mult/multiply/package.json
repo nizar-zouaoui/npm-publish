@@ -1,8 +1,0 @@
-
-{
-        "name": "multiply",
-        "description": "This is the export package for multiply",
-        "main": "../../mult/multiply/index.js",
-        "module": "../../mult/multiply/index.mjs",
-        "types": "../../mult/multiply/index.d.ts"
-}

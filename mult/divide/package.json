@@ -1,7 +1,0 @@
-{
-  "name": "divide",
-  "description": "AWS SDK V3 access for OneTable",
-  "main": "mult/divide/index.js",
-  "module": "mult/divide/index.mjs",
-  "types": "mult/divide/index.d.ts"
-}

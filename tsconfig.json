@@ -18,7 +18,7 @@
     "noEmit": false,
     "module": "CommonJS",
     "moduleResolution": "node",
-    "declaration": true,
+    "declaration": false,
     "inlineSourceMap": false,
     "listEmittedFiles": false,
     "listFiles": false,

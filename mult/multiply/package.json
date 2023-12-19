@@ -1,7 +1,0 @@
-{
-  "name": "multiply",
-  "description": "AWS SDK V3 access for OneTable",
-  "main": "mult/multiply/index.js",
-  "module": "mult/multiply/index.mjs",
-  "types": "mult/multiply/index.d.ts"
-}
