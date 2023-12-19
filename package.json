@@ -1,21 +1,56 @@
 {
   "name": "nizar-npm-publish-test",
   "description": "this is a temp project to test exports after build",
-  "version": "0.0.12",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/nizar-zouaoui/npm-publish"
   },
-  "main": "index.js",
-  "module": "index.mjs",
-  "types": "index.d.ts",
-  "type": "module",
+  "files": [
+    "build"
+  ],
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "types": "build/@types/index.d.ts",
   "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./build/cjs/index.js",
+      "import": "./build/esm/index.js"
+    },
+    "./*": {
+      "require": "./build/cjs/*.js",
+      "import": "./build/esm/*.js"
+    }
+  },
+  "typesVersions": {
+    ">=4": {
+      "getPercentage": [
+        "build/@types/getPercentage"
+      ],
+      "mult/divide": [
+        "build/@types/mult/divide"
+      ],
+      "mult/helper": [
+        "build/@types/mult/helper"
+      ],
+      "mult/multiply": [
+        "build/@types/mult/multiply"
+      ],
+      "mult/multiply/square": [
+        "build/@types/mult/multiply/square"
+      ],
+      "substract": [
+        "build/@types/substract"
+      ]
+    }
+  },
   "scripts": {
     "clean": "rimraf build",
-    "build": "yarn clean && yarn build:esm && node ./scripts/update-mjs-extensions.mjs && yarn build:cjs && node ./scripts/indexifyFile.mjs",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:types",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc --p tsconfig.types.prod.json",
     "test": "vitest run",
     "lint": "tsc",
     "launch": "npx ts-node index",
